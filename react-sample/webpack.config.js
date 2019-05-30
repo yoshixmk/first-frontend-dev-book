@@ -37,4 +37,9 @@ module.exports = {
       filename: '../css/style.css'
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, '/'),
+    historyApiFallback: true,
+    port: 3000,
+  },
 };
