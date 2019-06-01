@@ -36,6 +36,36 @@ const checkUser = (req, res, next) => {
 
 app.use(checkUser)
 
+function createChannel(cname) {
+  const channelsRef = admin.database().ref('channels')
+  const date1 = new Date()
+  const date2 = new Date()
+  date2.setSeconds(date2.getSeconds + 1)
+  const defaultData = `{
+    "messages" : {
+        "1" : {
+            "body" : "Welcome to #${cname} channel!",
+            "date" : "${date1.toJSON()}",
+            "user" : {
+                "avatar" : "",
+                "id" : "robot",
+                "name" : "Robot"
+            }
+        },
+        "2" : {
+            "body" : "はじめてのメッセージを投稿してみましょう。",
+            "date" : "${date2.toJSON()}",
+            "user" : {
+                "avatar" : "",
+                "id" : "robot",
+                "name" : "Robot"
+            }
+        }
+    }
+  }`
+  channelsRef.child(cname).set(JSON.parse(defaultData))
+}
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
