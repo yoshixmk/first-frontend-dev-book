@@ -66,6 +66,13 @@ function createChannel(cname) {
   channelsRef.child(cname).set(JSON.parse(defaultData))
 }
 
+app.post('/channels', (req, res) => {
+  let cname = req.body.cname;
+  createChannel(cname);
+  res.header('Content-Type', 'application/json; charset=utf-8');
+  res.status(201).json({result: 'ok'});
+});
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
