@@ -73,6 +73,19 @@ app.post('/channels', (req, res) => {
   res.status(201).json({result: 'ok'});
 });
 
+app.get('/channels', (req, res) => {
+  let channelsRef = admin.database().ref('channels');
+  channelsRef.once('value', function(snapshot) {
+      let items = new Array();
+      snapshot.forEach(function(childSnapshot) {
+          let cname = childSnapshot.key;
+          items.push(cname);
+      });
+      res.header('Content-Type', 'application/json; charset=utf-8');
+      res.send({channels: items});
+  });
+});
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
