@@ -86,9 +86,15 @@ app.get('/channels', (req, res) => {
   });
 });
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+app.post('/channels/:cname/messages', (req, res) => {
+  let cname = req.params.cname;
+  let message = {
+      date: new Date().toJSON(),
+      body: req.body.body,
+      user: req.user
+  };
+  let messagesRef = admin.database().ref(`channels/${cname}/messages`);
+  messagesRef.push(message);
+  res.header('Content-Type', 'application/json; charset=utf-8');
+  res.status(201).send({result: "ok"});
+});
