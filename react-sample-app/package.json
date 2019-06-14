@@ -1,6 +1,42 @@
 {
   "name": "react-sample-app",
   "version": "1.0.0",
+  "description": "A sample application using React",
   "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+      "build": "webpack --mode production",
+      "start": "webpack-dev-server --mode development --content-base ./dist --hot --inline --colors --port 3000 --open",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/okachijs/jsframeworkbook.git"
+  },
+  "author": "Takahiro Ikeuchi @iktakahiro",
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/okachijs/jsframeworkbook/issues"
+  },
+  "homepage": "https://github.com/okachijs/jsframeworkbook#readme",
+  "dependencies": {
+      "axios": "0.18.0",
+      "react": "16.5.2",
+      "react-dom": "16.5.2",
+      "react-router": "4.3.1",
+      "react-router-dom": "4.3.1",
+      "semantic-ui-react": "0.82.5"
+  },
+  "devDependencies": {
+      "@types/react": "16.4.16",
+      "@types/react-dom": "16.0.8",
+      "@types/react-router": "4.0.31",
+      "@types/react-router-dom": "4.3.1",
+      "ts-loader": "5.2.1",
+      "tslint": "5.11.0",
+      "tslint-config-typings": "0.3.1",
+      "typescript": "3.1.1",
+      "webpack": "4.20.2",
+      "webpack-cli": "3.1.2",
+      "webpack-dev-server": "3.1.9"
+  }
 }
