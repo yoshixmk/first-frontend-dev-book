@@ -1,7 +1,16 @@
-const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+const functions = require('firebase-functions');
 
-admin.initializeApp(functions.config().firebase)
+const path = require("path");
+const userHome = process.env[process.platform == "win32" ? "USERPROFILE" : "HOME"];
+
+
+const serviceAccount = require(path.join(userHome, ".ssh/demoapp-253ac-firebase-adminsdk-pctkl-9711a145ef.json"))
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://demoapp-253ac.firebaseio.com"
+});
 
 const express = require('express')
 const app = express()
