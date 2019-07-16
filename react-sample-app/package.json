@@ -5,19 +5,11 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack --mode production",
+        "build-dev": "webpack --mode development",
         "start": "webpack-dev-server --mode development --content-base ./dist --hot --inline --colors --port 3000 --open",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/okachijs/jsframeworkbook.git"
-    },
-    "author": "Takahiro Ikeuchi @iktakahiro",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/okachijs/jsframeworkbook/issues"
-    },
-    "homepage": "https://github.com/okachijs/jsframeworkbook#readme",
     "dependencies": {
         "axios": "0.18.0",
         "react": "16.5.2",

@@ -10,9 +10,7 @@ module.exports = [{
     context: path.resolve(__dirname, 'src'),
     entry: './Routes.tsx',
     output: {
-        path: __dirname + "/dist/js",
-        filename: 'build.js',
-        publicPath: '/dist/js',
+        filename: 'js/build.js'
     },
     module: {
         rules: [
