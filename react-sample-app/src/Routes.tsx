@@ -13,7 +13,8 @@ const routes = <BrowserRouter>
             <Container>
                 <Switch>
                     <Route
-                        exact={true} path='/channels/:channelName' component={Channel} />
+                        exact={true} path='/channels/:channelName' component={Channel}
+                        render={props => <h2>{props.match.params.channelName}</h2>} />
                     <Route
                         exact={true} path='/'
                         render={() => <h1>Sample Application</h1>} />
