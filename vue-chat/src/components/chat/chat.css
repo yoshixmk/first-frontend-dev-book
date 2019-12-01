@@ -1,0 +1,41 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.el-header {
+  border-bottom:1px solid black;
+}
+
+.el-header, .el-footer {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #4a3a4a;
+  text-align: center;
+  width: 100px!important;
+}
+
+.el-aside a {
+  color: #ffffff;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.el-main {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+}
+
+.el-container{
+  height: 100vh;
+}
+
+.el-input {
+  width: 50%;
+}
