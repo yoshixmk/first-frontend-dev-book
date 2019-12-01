@@ -1,3 +1,3 @@
-<template lang="pug" src="./chat.pug" />
+<template src="./chat.pug" lang="pug" />
 <script src="./chat.js" />
-<style scoped src="./chat.css" />
+<style src="./chat.css" scoped />
