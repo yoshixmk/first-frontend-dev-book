@@ -1,7 +1,7 @@
-import mapGetters from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import {
-  GET_CHANNELS,
-  SET_MESSAGES
+  GET_CHANNELS
+  // SET_MESSAGE
 } from '../../store/mutation-types'
 import MessageList from '../MessageList'
 
@@ -25,15 +25,14 @@ export default {
     next()
   },
   methods: {
-    // eslint-disable-next-line no-undef
     ...mapActions([
-      SET_MESSAGES,
+      // SET_MESSAGE,
       GET_CHANNELS,
       'GET_MESSAGES',
       'POST_MESSAGES'
     ]),
     send_message () {
-      this.SET_MESSAGE(this.message)
+      // this.SET_MESSAGE(this.message)
       this.POST_MESSAGES({'cname': this.$route.params.cname, 'message': this.message})
       this.message = ''
     }
