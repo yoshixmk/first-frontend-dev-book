@@ -1,8 +1,7 @@
-import { mapGetters, mapActions } from './node_modules/vuex'
+import mapGetters from 'vuex'
 import {
   GET_CHANNELS,
-  // eslint-disable-next-line no-unused-vars
-  SET_MESSAGE
+  SET_MESSAGES
 } from '../../store/mutation-types'
 import MessageList from '../MessageList'
 
@@ -19,21 +18,22 @@ export default {
     ...mapGetters([
       'messages',
       'channels'
-    ]),
+    ])
   },
-  beforeRouteUpdate(to, from, next) {
+  beforeRouteUpdate (to, from, next) {
     this.GET_MESSAGES(to.params.cname)
     next()
   },
   methods: {
+    // eslint-disable-next-line no-undef
     ...mapActions([
-      // SET_MESSAGE,
+      SET_MESSAGES,
       GET_CHANNELS,
       'GET_MESSAGES',
       'POST_MESSAGES'
     ]),
     send_message () {
-      // this.SET_MESSAGE(this.message)
+      this.SET_MESSAGE(this.message)
       this.POST_MESSAGES({'cname': this.$route.params.cname, 'message': this.message})
       this.message = ''
     }
