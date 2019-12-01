@@ -12,15 +12,15 @@ async function fetch_get_messages (cname) {
 }
 
 export default {
-  // [SET_MESSAGE] ({commit}, message) {
-  //   commit(SET_MESSAGE, message)
-  // },
+  [SET_MESSAGE] ({commit}, message) {
+    commit(SET_MESSAGE, message)
+  },
   [GET_CHANNELS] ({commit}) {
-    // fetch('https://us-central1-demoapp-1779c.cloudfunctions.net/v1/channels').then((response) => {
-    //   return response.json()
-    // }).then((json) => {
-    //   commit(GET_CHANNELS, json.channels)
-    // })
+    fetch('https://us-central1-demoapp-1779c.cloudfunctions.net/v1/channels').then((response) => {
+      return response.json()
+    }).then((json) => {
+      commit(GET_CHANNELS, json.channels)
+    })
     async function fetch_api(){
       const response = await fetch('https://us-central1-demoapp-1779c.cloudfunctions.net/v1/channels')
       const json = await response.json()
