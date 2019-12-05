@@ -1,7 +1,7 @@
 import { mapGetters, mapActions } from 'vuex'
 import {
   GET_CHANNELS,
-  SET_MESSAGE
+  SET_MESSAGES
 } from '../../store/mutation-types'
 import MessageList from '../MessageList'
 
@@ -26,13 +26,13 @@ export default {
   },
   methods: {
     ...mapActions([
-      SET_MESSAGE,
+      SET_MESSAGES,
       GET_CHANNELS,
       'GET_MESSAGES',
       'POST_MESSAGES'
     ]),
     send_message () {
-      this.SET_MESSAGE(this.message)
+      this.SET_MESSAGES(this.message)
       this.POST_MESSAGES({'cname': this.$route.params.cname, 'message': this.message})
       this.message = ''
     }

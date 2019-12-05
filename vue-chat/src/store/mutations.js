@@ -4,10 +4,10 @@ import {
 } from './mutation-types'
 
 export default {
-  [GET_CHANNELS](state, channels) {
+  [GET_CHANNELS] (state, channels) {
     state.channels = channels
   },
-  [SET_MESSAGES](state, messages) {
+  [SET_MESSAGES] (state, messages) {
     state.messages = messages
   }
 }
