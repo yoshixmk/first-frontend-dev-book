@@ -7,7 +7,7 @@
     <mat-nav-list>
       <h3 matSubheader>Channels</h3>
       <mat-divider></mat-divider>
-      <mat-list-item *ngFor="let channel of channels" [routerLink]="['/channels', channel]">
+      <mat-list-item *ngFor="let channel of channels" routerLink="/channels/channel">
         #{{ channel }}
       </mat-list-item>
     </mat-nav-list>
