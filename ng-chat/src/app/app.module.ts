@@ -24,7 +24,7 @@ import { ChannelComponent } from './channel/channel.component';
 
 // import { ReversePipe } from './pipes/reverse.pipe';
 
-// import { MessageService } from './services/message.service';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,7 @@ import { ChannelComponent } from './channel/channel.component';
     MatToolbarModule,
     MatSidenavModule
   ],
-  providers: [/*MessageService*/],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
