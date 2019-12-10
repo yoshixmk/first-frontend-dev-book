@@ -26,12 +26,14 @@ import { ChannelComponent } from './channel/channel.component';
 
 import { MessageService } from './services/message.service';
 import { MessageFeedComponent } from './message-feed/message-feed.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChannelComponent,
     MessageFeedComponent,
+    ReversePipe,
     // ChannelComponent,
     // MessageFeedComponent,
     // MessageFormComponent,

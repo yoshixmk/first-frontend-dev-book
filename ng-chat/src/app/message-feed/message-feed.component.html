@@ -1,6 +1,6 @@
 <mat-card *ngIf="(messagesObservable | async) as messages">
   <mat-list>
-    <mat-list-item *ngFor="let message of messages.messages">
+    <mat-list-item *ngFor="let message of messages.messages | reverse">
       <img mat-list-avatar [src]="message.user.avatar">
       <h4 mat-line>
         <b>{{ message.user.name }}</b>
