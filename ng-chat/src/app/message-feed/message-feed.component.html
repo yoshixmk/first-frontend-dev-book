@@ -1,7 +1,8 @@
 <mat-card *ngIf="(messagesObservable | async) as messages">
   <mat-list>
     <mat-list-item *ngFor="let message of messages.messages | reverse">
-      <img mat-list-avatar [src]="message.user.avatar">
+      <!-- <img mat-list-avatar [src]="message.user.avatar"> -->
+      <img mat-list-avatar src="assets/img/avatar.png">
       <h4 mat-line>
         <b>{{ message.user.name }}</b>
         <span class="date">{{ message.date | date: 'yyyy/MM/dd HH:mm' }}</span>
