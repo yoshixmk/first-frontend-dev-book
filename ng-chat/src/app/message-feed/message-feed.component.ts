@@ -18,9 +18,10 @@ export class MessageFeedComponent implements OnInit {
   ) { }
 
   refresh() {
-    this.messagesObservable = this.route.params.pipe(
-      // tslint:disable-next-line: no-string-literal
-      res => this.messageService.fetch(res['name'])
+    this.route.params.forEach(
+      param => {
+        this.messagesObservable = this.messageService.fetch(param.name);
+      }
     );
   }
 
