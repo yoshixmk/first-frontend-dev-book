@@ -24,7 +24,7 @@ export class MessageService {
     return this.http.get<Message[]>(`${this.API}/channels/${cname}/messages`);
   }
 
-  post (cname: string, body: string): Observable<Message> {
+  post(cname: string, body: string): Observable<Message> {
     // tslint:disable-next-line: object-literal-key-quotes
     return this.http.post<Message>(`${this.API}/channels/${cname}/messages`, {'body': body}, this.httpOptions);
   }
