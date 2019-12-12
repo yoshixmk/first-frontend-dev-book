@@ -18,12 +18,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ChannelComponent } from './channel/channel.component';
-// import { ChannelComponent } from './channel/channel.component';
-// import { MessageFeedComponent } from './message-feed/message-feed.component';
-// import { MessageFormComponent } from './message-form/message-form.component';
-
-// import { ReversePipe } from './pipes/reverse.pipe';
-
 import { MessageService } from './services/message.service';
 import { MessageFeedComponent } from './message-feed/message-feed.component';
 import { ReversePipe } from './pipes/reverse.pipe';
@@ -36,17 +30,16 @@ import { MessageFormComponent } from './message-form/message-form.component';
     MessageFeedComponent,
     ReversePipe,
     MessageFormComponent,
-    // ChannelComponent,
-    // MessageFeedComponent,
-    // MessageFormComponent,
-    // ReversePipe
+    ChannelComponent,
+    MessageFeedComponent,
+    MessageFormComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
