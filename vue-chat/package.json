@@ -5,7 +5,7 @@
   "author": "YoshihiroUeki <pirori67@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -75,6 +75,7 @@
     "vue-template-compiler": "^2.6.14",
     "webpack": "^5.51.1",
     "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0",
     "webpack-dev-server": ">=3.1.11",
     "webpack-merge": "^5.8.0"
   },
